@@ -1,96 +1,104 @@
-#ifndef SHIRT_H
-#define SHIRT_H
-
-#include "item.h"
-
-class Shirt : public Item {
-private:
-     string material;
-     string fit;
-     string purpose;
-     string size;
-public:
-     // Constructors and destructors
-     Shirt();
-     Shirt(string barcode, string color, string material, string fit, string purpose, string size);
-     ~Shirt();
-
-     // Mutators
-     void setMaterial(string material);
-     void setFit(string fit);
-     void setPurpose(string purpose);
-     void setSize(string size);
-
-     // Accessors
-     string getMaterial() const;
-     string getFit() const;
-     string getPurpose() const;
-     string getSize() const;
-
-};
-
-#endif
+#include "shirt.h"
 
 // ****************************************************************************
-// Shirt()
 // Purpose: default constructor assigns default values to material, fit, purpose and size.
 // ****************************************************************************
+Shirt::Shirt() : Item()
+{
+     material = "";
+     fit = "";
+     purpose = "";
+     size = "";
+}
 
 // ****************************************************************************
-// Shirt(string barcode, string color, string material, string fit, string purpose. string size)
 // Purpose: Constructor that takes in all parameters while utilizing the parent constructor
 // ****************************************************************************
+Shirt::Shirt(string barcode, string color, string material, string fit, string purpose, string size)
+     : Item("Shirt", barcode, color)
+{
+     this -> material = material;
+     this -> fit = fit;
+     this -> purpose = purpose;
+     this -> size = size;
+}
 
 // ****************************************************************************
-// ~Shirt()
 // Purpose: default destructor to delete shirt object.
 // ****************************************************************************
+Shirt::~Shirt()
+{
+     // default destructor
+}
 
 // ****************************************************************************
-// void setMaterial(string material)
 // Purpose: set the material based on parameter
 // Pre: material - mutator variable
 // ****************************************************************************
-
+void Shirt::setMaterial(string material)
+{
+     this -> material = material;
+}
 
 // ****************************************************************************
-// void setFit(string fit)
 // Purpose: set the fit based on parameter
 // Pre: fit - mutator variable
 // ****************************************************************************
+void Shirt::setFit(string fit)
+{
+     this -> fit = fit;
+}
 
 // ****************************************************************************
-// void setPurpose(string purpose)
 // Purpose: set the purpose based on parameter
 // Pre: purpose - mutator variable
 // ****************************************************************************
+void Shirt::setPurpose(string purpose)
+{
+     this -> purpose = purpose;
+}
 
 // ****************************************************************************
-// void setSize(string size)
 // Purpose: set the size based on parameter
 // Pre: size - mutator variable
 // ****************************************************************************
+void Shirt::setSize(string size)
+{
+     this -> size = size;
+}
 
 // ****************************************************************************
-// string getMaterial() const
 // Purpose: return the material data member
 // post: return the material data member
 // ****************************************************************************
+string Shirt::getMaterial() const
+{
+     return material;
+}
 
 // ****************************************************************************
-// string getFit() const
 // Purpose: return the fit data member
 // post: return the fit data member
 // ****************************************************************************
+string Shirt::getFit() const
+{
+     return fit;
+}
 
 // ****************************************************************************
-// string getPurpose() const
 // Purpose: return the purpose data member
 // post: return the purpose data member
 // ****************************************************************************
+string Shirt::getPurpose() const
+{
+     return purpose;
+}
 
 // ****************************************************************************
-// string getSize() const;
 // Purpose: return the size data member
 // post: return the size data member
 // ****************************************************************************
+string Shirt::getSize() const
+{
+     return size;
+}
