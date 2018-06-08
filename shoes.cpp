@@ -1,64 +1,64 @@
-#ifndef SHOES_H
-#define SHOES_H
-
-#include "item.h"
-
-class Shoes : public Item {
-public:
-     string purpose;
-     double size;
-private:
-     // Constructors and destructor
-     Shoes();
-     Shoes(string barcode, string color, string purpose, double size);
-     ~Shoes();
-
-     // Mutators
-     void setPurpose(string purpose);
-     void setSize(double size);
-
-     // Accessors
-     string getPurpose() const;
-     double getSize() const;
-};
-
-#endif
+#include "shoes.h"
 
 // ****************************************************************************
-// Shoes()
 // Purpose: default constructor sets data members to the default.
 // ****************************************************************************
+Shoes::Shoes()
+{
+     purpose = "";
+     size = 0.0;
+}
+
 
 // ****************************************************************************
-// Shoes(string barcode, string color, string purpose, double size)
 // Purpose: constructor sets all data members to the parameters provided.
 // ****************************************************************************
+Shoes::Shoes(string barcode, string color, string purpose, double size) : Item("Shoes", barcode, color)
+{
+     this -> purpose = purpose;
+     this -> size = size;
+}
 
 // ****************************************************************************
-// ~Shoes()
 // Purpose: default destructor
 // ****************************************************************************
+Shoes::~Shoes()
+{
+     // Default destructor
+}
 
 // ****************************************************************************
-// void setPurpose(string purpose)
 // Purpose: set the purpose based on parameter
 // Pre: purpose - mutator variable
 // ****************************************************************************
+void Shoes::setPurpose(string purpose)
+{
+     this -> purpose = purpose;
+}
 
 // ****************************************************************************
-// void setSize(double size)
 // Purpose: set the size based on parameter
 // Pre: size - mutator variable
 // ****************************************************************************
+void Shoes::setSize(double size)
+{
+     this -> size = size;
+}
 
 // ****************************************************************************
-// string getPurpose() const
 // Purpose: return the purpose data member
 // post: return the purpose data member
 // ****************************************************************************
+string Shoes::getPurpose() const
+{
+     return purpose;
+}
 
 // ****************************************************************************
-// double getSize() const
 // Purpose: return the size data member
 // post: return the size data member
 // ****************************************************************************
+double Shoes::getSize() const
+{
+     return size;
+}

@@ -3,7 +3,7 @@
 // ****************************************************************************
 // Purpose: generate barcode based on specified rules (1st digit is style,
 // 2nd digit is color, randomize the last two.
-// Post: int that is the generated barcode.
+// Post: string that is the generated barcode.
 // ****************************************************************************
 string Item::generateBarcode() {
      // create a temp string to assign the first two numbers according to
@@ -115,7 +115,7 @@ string Item::generateBarcode() {
 Item::Item()
 {
      style = "";
-     barcode = 0;
+     barcode = "";
      color = "";
 }
 
@@ -149,21 +149,12 @@ Item::~Item()
 }
 
 // ****************************************************************************
-// Purpose: set the style data member to the parameter passed.
-// Pre: s - set the style to the parameter passed.
-// ****************************************************************************
-void Item::setStyle(string s)
-{
-     style = s;
-}
-
-// ****************************************************************************
 // Purpose: set the color data member to the parameter passed.
-// Pre: c - set the color to the parameter passed.
+// Pre: color - set the color to the parameter passed.
 // ****************************************************************************
-void Item::setColor(string c)
+void Item::setColor(string color)
 {
-     color = c;
+     this -> color = color;
 }
 
 // ****************************************************************************
@@ -179,7 +170,7 @@ string Item::getStyle() const
 // Purpose: return the barcode data member.
 // Post: return the barcode data member.
 // ****************************************************************************
-int Item::getBarcode() const
+string Item::getBarcode() const
 {
      return barcode;
 }

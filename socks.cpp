@@ -12,10 +12,11 @@ Socks::Socks() : Item()
 }
 
 // ****************************************************************************
-// Purpose: Constructor that takes in all three parameters.
+// Purpose: Constructor that takes in all parameters while utilizing the parent constructor.
 // Create an object using the parameters provided.
 // ****************************************************************************
-Socks::Socks(string style, string barcode, string color, string material, string fit, string size) : Item("Socks", string barcode, string color)
+Socks::Socks(string barcode, string color, string material, string fit, string size)
+     : Item("Socks", barcode, color)
 {
      this -> material = material;
      this -> fit = fit;
@@ -34,32 +35,32 @@ Socks::~Socks()
 // Purpose: change the material based on the parameter provided.
 // Pre: m - parameter to change the material data member.
 // ****************************************************************************
-void Socks::setMaterial(string m)
+void Socks::setMaterial(string material)
 {
-     material = m;
+     this -> material = material;
 }
 
 // ****************************************************************************
 // Purpose: change the fit based on the parameter provided.
 // Pre: f - parameter to change the fit data member.
 // ****************************************************************************
-void Socks::setFit(string f)
+void Socks::setFit(string fit)
 {
-     fit = f;
+     this -> fit = fit;
 }
 
 // ****************************************************************************
 // Purpose: change the size based on the parameter provided.
 // Pre: s - parameter to change the size data member.
 // ****************************************************************************
-void Socks::setSize(string s)
+void Socks::setSize(string size)
 {
-     size = s;
+     this -> size = size;
 }
 
 // ****************************************************************************
-// Purpose: return the material data object
-// Post: return the material data object
+// Purpose: return the material data member
+// Post: return the material data member
 // ****************************************************************************
 string Socks::getMaterial() const
 {
@@ -67,8 +68,8 @@ string Socks::getMaterial() const
 }
 
 // ****************************************************************************
-// Purpose: return the fit data object
-// Post: return the fit data object
+// Purpose: return the fit data member
+// Post: return the fit data member
 // ****************************************************************************
 string Socks::getFit() const
 {
@@ -76,8 +77,8 @@ string Socks::getFit() const
 }
 
 // ****************************************************************************
-// Purpose: return the size data object
-// Post: return the size data object
+// Purpose: return the size data member
+// Post: return the size data member
 // ****************************************************************************
 string Socks::getSize() const
 {
