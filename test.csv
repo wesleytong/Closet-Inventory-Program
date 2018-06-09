@@ -1,0 +1,36 @@
+﻿Style,Barcode,Color,Material,Size,Fit,Description,
+Socks,1647,Blue,Cotton,M,Crew,Socks from uniqlo,
+Socks,1127,Brown,Wool,M,Ankle,Birthday gift from friend,
+Socks,1843,Grey,Nylon,M,Thigh,Birthday gift from friend,
+Socks,1385,Orange,Polyester,M,Knee,Birthday gift from friend,
+Socks,1138,Brown,Cotton,M,Quarter,Birthday gift from friend,
+Style,Barcode,Color,Material,Size,Fit,Purpose,Description
+Shirt,2419,Yellow,Cotton,M,Classic,Work,Bought in Asia
+Shirt,2581,Green,Cotton,M,Slim,Work,Bought in Asia
+Shirt,2672,Blue,Polyester,M,No Pockets,Casual,Bought in Asia
+Shirt,2353,Orange,Cotton,M,Super Slim,Dress,Bought in Asia
+Shirt,2691,Blue,Polyester,M,No Pockets,Casual,Bought in Asia
+Style,Barcode,Color,Material,Size,Purpose,Description,
+Shoes,3678,Blue,Suede,9.5,Work,First work shoe,
+Shoes,3770,Violet,Suede,9.5,Work,Bought from Nordstrom,
+Shoes,3996,White,Leather,10,Casual,First pair of lether shoes,
+Shoes,3916,White,Canvas,9,Casual,,
+Shoes,3132,Brown,Wool,10,Dress,,
+Style,Barcode,Color,Material,Size,Fit,Purpose,Description
+Pants,4569,Green,Leather,31,Straight,Dress,Gift
+Pants,4164,Brown,Cotton,31,Slim,Casual,
+Pants,4620,Blue,Denim,31,Skinny,Casual,Gift
+Pants,4112,Brown,Cotton,31,Super Slim,Work,
+Pants,4937,White,Cotton,30,Slim,Work,
+Style,Barcode,Color,Material,Size,Description,,
+Outerwear,5255,Red,Cotton,M,Track jacket from Adidas,,
+Outerwear,5433,Yellow,Wool,M,Bought for work event,,
+Outerwear,5349,Orange,Polyester,M,,,
+Outerwear,5883,Grey,Leather,M,Wedding outfit,,
+Outerwear,5524,Green,Nylon,M,,,
+Style,Barcode,Color,Material,Description,,,
+Ring,6820,Grey,Gold,New accessory,,,
+Watch,6674,Blue,Steel,"Rolex, first big purchase after work",,,
+Belt,6622,Blue,Leather,Bought for work,,,
+Scarf,6491,Yellow,Cotton,Gift from brother from a trip,,,
+Hat,6559,Green,Cotton,Casual hat for school,,,

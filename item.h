@@ -13,6 +13,7 @@ private:
      string style;
      string barcode; // barcode is our unique ID
      string color;
+     string description;
 
      string generateBarcode();
 
@@ -24,11 +25,13 @@ public:
 
      // Mutators
      void setColor(string color);
+     void setDescription(string description);
 
      // Accessors
      string getStyle() const;
      string getBarcode() const;
      string getColor() const;
+     string getDescription() const;
 
 };
 
