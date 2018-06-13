@@ -5,27 +5,21 @@
 
 class Shirt : public Item {
 private:
-     string material;
      string fit;
      string purpose;
-     string size;
 public:
      // Constructors and destructors
      Shirt();
-     Shirt(string barcode, string color, string material, string fit, string purpose, string size);
+     Shirt(string barcode, string color, string material, string size, string fit, string purpose, string description);
      ~Shirt();
 
      // Mutators
-     void setMaterial(string material);
      void setFit(string fit);
      void setPurpose(string purpose);
-     void setSize(string size);
 
      // Accessors
-     string getMaterial() const;
      string getFit() const;
      string getPurpose() const;
-     string getSize() const;
 
 };
 
@@ -37,7 +31,7 @@ public:
 // ****************************************************************************
 
 // ****************************************************************************
-// Shirt(string barcode, string color, string material, string fit, string purpose. string size)
+// Shirt(string barcode, string color, string material, string size, string fit, string purpose, string description)
 // Purpose: Constructor that takes in all parameters while utilizing the parent constructor
 // ****************************************************************************
 
@@ -45,13 +39,6 @@ public:
 // ~Shirt()
 // Purpose: default destructor to delete shirt object.
 // ****************************************************************************
-
-// ****************************************************************************
-// void setMaterial(string material)
-// Purpose: set the material based on parameter
-// Pre: material - mutator variable
-// ****************************************************************************
-
 
 // ****************************************************************************
 // void setFit(string fit)
@@ -66,18 +53,6 @@ public:
 // ****************************************************************************
 
 // ****************************************************************************
-// void setSize(string size)
-// Purpose: set the size based on parameter
-// Pre: size - mutator variable
-// ****************************************************************************
-
-// ****************************************************************************
-// string getMaterial() const
-// Purpose: return the material data member
-// post: return the material data member
-// ****************************************************************************
-
-// ****************************************************************************
 // string getFit() const
 // Purpose: return the fit data member
 // post: return the fit data member
@@ -87,10 +62,4 @@ public:
 // string getPurpose() const
 // Purpose: return the purpose data member
 // post: return the purpose data member
-// ****************************************************************************
-
-// ****************************************************************************
-// string getSize() const;
-// Purpose: return the size data member
-// post: return the size data member
 // ****************************************************************************

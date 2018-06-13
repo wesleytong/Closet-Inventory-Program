@@ -117,6 +117,9 @@ Item::Item()
      style = "";
      barcode = "";
      color = "";
+     description = "";
+     material = "";
+     size = "";
 }
 
 // ****************************************************************************
@@ -124,12 +127,15 @@ Item::Item()
 // Pre: style - set the style to the parameter passed.
 //      barcode - set the barcode to the parameter passsed.
 //      color - set the color to the parameter passed.
+//      description - set the description to the parameter passed.
+//      material - set the material to the parameter passed.
+//      size - set the size to the parameter passed.
 // Post: tree has been processed
 // ****************************************************************************
-Item::Item(string style, string barcode, string color)
+Item::Item(string style, string barcode, string color, string description, string material, string size)
 {
      this -> style = style;
-     if (barcode == "0")
+     if (barcode == "")
      {
           this -> barcode = generateBarcode();
      }
@@ -138,6 +144,9 @@ Item::Item(string style, string barcode, string color)
           this -> barcode = barcode;
      }
      this -> color = color;
+     this -> description = description;
+     this -> material = material;
+     this -> size = size;
 }
 
 // ****************************************************************************
@@ -155,6 +164,60 @@ Item::~Item()
 void Item::setColor(string color)
 {
      this -> color = color;
+}
+
+// ****************************************************************************
+// Purpose: set the material data member to the parameter passed.
+// Pre: material - set the color to the parameter passed.
+// ****************************************************************************
+void Item::setMaterial(string material)
+{
+     this -> material = material;
+}
+
+// ****************************************************************************
+// Purpose: set the description data member to the parameter passed.
+// Pre: description - set the description to the parameter passed.
+// ****************************************************************************
+void Item::setDescription(string description)
+{
+     this -> description = description;
+}
+
+// ****************************************************************************
+// Purpose: set the size data member to the parameter passed.
+// Pre: size - set the size to the parameter passed.
+// ****************************************************************************
+void Item::setSize(string size)
+{
+     this -> size = size;
+}
+
+// ****************************************************************************
+// Purpose: return the material data member.
+// Post: return the material data member.
+// ****************************************************************************
+string Item::getMaterial() const
+{
+     return material;
+}
+
+// ****************************************************************************
+// Purpose: return the descrption data member.
+// Post: return the description data member.
+// ****************************************************************************
+string Item::getDescription() const
+{
+     return description;
+}
+
+// ****************************************************************************
+// Purpose: return the size data member.
+// Post: return the size data member.
+// ****************************************************************************
+string Item::getSize() const
+{
+     return size;
 }
 
 // ****************************************************************************
