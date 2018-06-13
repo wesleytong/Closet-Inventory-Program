@@ -7,23 +7,20 @@ class Pants : public Item {
 private:
      string purpose;
      string fit;
-     int size;
 
 public:
      // Constructors and destructors
      Pants();
-     Pants(string barcode, string color, string purpose, string fit, int size);
+     Pants(string barcode, string color, string material, string size, string purpose, string fit, string description);
      ~Pants();
 
      // Mutators
      void setPurpose(string purpose);
      void setFit(string fit);
-     void setSize(int size);
 
      // Accessors
      string getPurpose() const;
      string getFit() const;
-     int getSize() const;
 };
 
 #endif
@@ -34,7 +31,7 @@ public:
 // ****************************************************************************
 
 // ****************************************************************************
-// Pants(string barcode, string color, string purpose, string fit, int size)
+// Pants(string barcode, string color, string material, string size, string purpose, string fit, string description)
 // Purpose: constructor sets all data members to the parameters provided.
 // ****************************************************************************
 
@@ -51,14 +48,8 @@ public:
 
 // ****************************************************************************
 // void setFit(string fit)
-// Purpose: change the fit based on the parameter provided.
-// Pre: f - parameter to change the fit data member.
-// ****************************************************************************
-
-// ****************************************************************************
-// void setSize(int size)
-// Purpose: change the size based on the parameter provided.
-// Pre: size - parameter to change the size data member.
+// Purpose: set the fit based on parameter
+// Pre: fit - mutator variable
 // ****************************************************************************
 
 // ****************************************************************************
@@ -71,10 +62,4 @@ public:
 // string getFit() const
 // Purpose: return the fit data member
 // Post: return the fit data member
-// ****************************************************************************
-
-// ****************************************************************************
-// int getSize() const
-// Purpose: return the size data member
-// Post: return the size data member
 // ****************************************************************************

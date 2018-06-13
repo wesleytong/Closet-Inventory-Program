@@ -6,17 +6,16 @@
 Shoes::Shoes()
 {
      purpose = "";
-     size = 0.0;
 }
 
 
 // ****************************************************************************
 // Purpose: constructor sets all data members to the parameters provided.
 // ****************************************************************************
-Shoes::Shoes(string barcode, string color, string purpose, double size) : Item("Shoes", barcode, color)
+Shoes::Shoes(string barcode, string color, string material, string size, string purpose, string description)
+     : Item("Shoes", barcode, color, description, material, size)
 {
      this -> purpose = purpose;
-     this -> size = size;
 }
 
 // ****************************************************************************
@@ -37,28 +36,10 @@ void Shoes::setPurpose(string purpose)
 }
 
 // ****************************************************************************
-// Purpose: set the size based on parameter
-// Pre: size - mutator variable
-// ****************************************************************************
-void Shoes::setSize(double size)
-{
-     this -> size = size;
-}
-
-// ****************************************************************************
 // Purpose: return the purpose data member
 // post: return the purpose data member
 // ****************************************************************************
 string Shoes::getPurpose() const
 {
      return purpose;
-}
-
-// ****************************************************************************
-// Purpose: return the size data member
-// post: return the size data member
-// ****************************************************************************
-double Shoes::getSize() const
-{
-     return size;
 }

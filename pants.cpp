@@ -7,18 +7,16 @@ Pants::Pants() : Item()
 {
      purpose = "";
      fit = "";
-     size = 0;
 }
 
 // ****************************************************************************
 // Purpose: constructor sets all data members to the parameters provided.
 // ****************************************************************************
-Pants::Pants(string barcode, string color, string purpose, string fit, int size)
-     : Item("Pants", barcode, color)
+Pants::Pants(string barcode, string color, string material, string size, string purpose, string fit, string description)
+     : Item("Pants", barcode, color, description, material, size)
 {
      this -> purpose = purpose;
      this -> fit = fit;
-     this -> size = size;
 }
 
 // ****************************************************************************
@@ -48,15 +46,6 @@ void Pants::setFit(string fit)
 }
 
 // ****************************************************************************
-// Purpose: change the size based on the parameter provided.
-// Pre: s - parameter to change the size data member.
-// ****************************************************************************
-void Pants::setSize(int size)
-{
-     this -> size = size;
-}
-
-// ****************************************************************************
 // Purpose: return the purpose data member
 // post: return the purpose data member
 // ****************************************************************************
@@ -72,13 +61,4 @@ string Pants::getPurpose() const
 string Pants::getFit() const
 {
      return fit;
-}
-
-// ****************************************************************************
-// Purpose: return the size data member
-// Post: return the size data member
-// ****************************************************************************
-int Pants::getSize() const
-{
-     return size;
 }
